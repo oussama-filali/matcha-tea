@@ -1,0 +1,316 @@
+/* Reset des marges, paddings, etc. */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 10px; /* Réduction des marges internes */
+    background-color:#B7CB91;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.container-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container-profile .btn {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-profile .btn:hover {
+    background-color: #45a049;
+}
+/* Main Container */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 160px); /* Ajustez en fonction de la hauteur du header et du footer */
+}
+
+/* Navigation Bar */
+.nav-bar {
+    width: 200px; /* Largeur de la barre de navigation */
+    background-color: #D1D4B7; /* Couleur de fond */
+    display: flex;
+    flex-direction: column; /* Disposition verticale */
+    align-items: center; /* Centrer horizontalement le contenu */
+    justify-content: center; /* Centrer verticalement le contenu */
+    padding: 20px 0; /* Espacement interne */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Légère ombre pour la séparation */
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-direction: column; /* Organisation verticale des liens */
+    gap: 20px; /* Espacement entre les éléments */
+    justify-content: space-around;
+}
+
+.nav-bar ul li a {
+    writing-mode: vertical-rl; /* Texte vertical */
+    text-align: center; /* Centrer le texte */
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+.nav-bar ul li a:hover {
+    color: #B7CB91;
+}
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #B7CB91;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour le modal */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal:target {
+    display: flex; /* Affiche le modal si ciblé avec un lien */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Boutons et formulaires */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 8px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+/* Slideshow */
+.slideshow {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    display: flex; /* Garde le conteneur des slides en place */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center; /* Centrer le contenu verticalement */
+    background-color: #000; /* Couleur de fond par défaut pour éviter un vide */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    animation: slideAnimation 16s infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+.slide:nth-child(2) {
+    animation-delay: 4s;
+}
+.slide:nth-child(3) {
+    animation-delay: 8s;
+}
+.slide:nth-child(4) {
+    animation-delay: 8s;
+}
+
+/* Animation des slides */
+@keyframes slideAnimation {
+    0% { opacity: 0; }
+    12.5% { opacity: 1; }
+    37.5% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Contenu principal */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color:#B7CB91;
+    color: #424F29;
+    padding: 10px;
+    text-align: center;
+}
+
+footer .Navigation a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .Navigation a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .nav-bar {
+        width: 100%; /* Barre de navigation horizontale sur petit écran */
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-bar ul {
+        flex-direction: row; /* Disposition horizontale des liens */
+        gap: 10px; /* Espacement réduit */
+    }
+
+    .slideshow {
+        height: 60vh; /* Ajuste la hauteur pour les écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .nav-bar {
+        width: 100%;
+        height: auto; /* S'adapte à la taille du contenu */
+    }
+    
+
+    .slideshow {
+        height: 50vh; /* Ajuste la hauteur pour les écrans plus petits */
+    }
+
+    .container-profile {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .container-logo img {
+        width: 50px;
+        height: 50px;
+    }
+}
+

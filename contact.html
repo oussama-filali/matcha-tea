@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- En-tête le meme que dans vente.html-->
+    <header class="header">
+        <div class="container-logo">
+            <img src="matcha.jpg" alt="Logo de Matcha Tea">
+        </div>
+        <div class="container-title">
+            <img src="tea2.webp" alt="Titre Matcha Tea" class="title-image">
+        </div>
+        <div class="container-profile">
+            <img src="profile.png" alt="Image de profil" class="profile-pic">
+            <button class="btn">Connexion</button>
+        </div>
+    </header>
+    
+    <!-- Contenu principal le meme que dans vente.html-->
+    <main>
+        <div class="main-container">
+            <!-- Navigation la meme que dans vente.html-->
+            <nav class="nav-bar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="vente.html">Vente</a></li>
+                    <li><a href="histoire.html">Histoire</a></li>
+                    <li><a href="A propos.html">À propos</a></li>
+                    <li><a href="#contact-modal" class="open-modal">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Slideshow avec texte superposé -->
+            <div class="slideshow">
+                <div class="slide"><img src="matcha-shop.webp" alt="Diapositive 1"></div>
+                <div class="slide"><img src="file-CL3ExYQmnAdxa6J5QFL6yt.webp" alt="Diapositive 2"></div>
+                <div class="slide"><img src="DALL·E 2025-01-12 23.03.22 - A beautifully arranged product display of matcha tea. The scene features a high-quality tin of matcha powder placed next to a traditional bamboo whisk.webp" alt="Diapositive 3"></div>
+                <div class="slide"><img src="bf.webp" alt="Diapositive 4"></div>
+                
+                <div class="overlay-text">
+                    <h2>Bienvenue sur notre site !</h2>
+                    <p>Découvrez nos produits Matcha et explorez notre histoire.</p>
+                </div>
+
+        <!-- Modal de contact -->
+        <div id="contact-modal" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close-modal">&times;</a>
+                <h2>Envoyez un message</h2>
+                <form>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                    
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <!-- footer le meme que dans vente.html -->
+    <footer>
+        <div class="coordonnees">
+            <p>&copy; 2025 Tous droits réservés - Matcha Tea</p>
+            <p>Adresse : 56 allée de la paix - Marseille</p>
+        </div>
+        <div class="navigation-footer">
+            <a href="index.html">Accueil</a>
+            <a href="vente.html">Vente</a>
+            <a href="histoire.html">Histoire</a>
+            <a href="contact.html">Contact</a>
+            <a href="A propos.html">À propos</a>
+        </div>
+    </footer>
+</body>
+</html>
